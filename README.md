@@ -17,4 +17,4 @@ try escape from chroot with non root user, for now it only works on x86_64
 ```
 
 ## Example:
-![chroot-escape](https://camo.githubusercontent.com/f20c4ebefd1fa2bef59d761a43bccdb133ee975f/68747470733a2f2f692e696d6775722e636f6d2f466450347a335a2e706e67)
+![chroot-escape](https://camo.githubusercontent.com/ee837c9b2a68639ac282c72e208883646a323a4e/68747470733a2f2f692e696d6775722e636f6d2f4b504e634355732e706e67)
