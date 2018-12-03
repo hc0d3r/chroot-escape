@@ -11,6 +11,6 @@ fi
 
 ./suid-sleep &
 echo "+ ./suid-sleep & [$!]"
-echo "+ chroot --userspec=57005:57005 jail/ /chroot-escape -p $! -f"
-chroot --userspec=57005:57005 jail/ /chroot-escape -p $! -f
+echo "+ chroot --userspec=57005:57005 jail/ /chroot-escape -p $!"
+chroot --userspec=57005:57005 jail/ /chroot-escape -p $!
 wait

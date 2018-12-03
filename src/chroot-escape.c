@@ -176,14 +176,6 @@ int main(int argc, char **argv){
         good("you are in a jail !!!\n");
     }
 
-    info("checking procfs ...\n");
-    if(procfs(opts.proc)){
-        bad("%s is not a valid procfs\n", opts.proc);
-        xreturn 0;
-    } else {
-        good("procfs okay !!!\n");
-    }
-
     info("checking if ptrace is blocked ...\n");
     if(!ptrace_allowed(opts.proc)){
         bad("ptrace blocked ...\n");
@@ -213,6 +205,14 @@ int main(int argc, char **argv){
     }
 
     if(opts.scan){
+        info("checking procfs ...\n");
+        if(procfs(opts.proc)){
+            bad("%s is not a valid procfs\n", opts.proc);
+            xreturn 0;
+        } else {
+            good("procfs okay !!!\n");
+        }
+
         info("scanning proc for pids ...\n");
         listproc(&plist, opts.proc, opts.all);
         if(plist.len)
